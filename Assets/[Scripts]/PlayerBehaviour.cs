@@ -8,15 +8,13 @@ public class PlayerBehaviour : MonoBehaviour
     public Transform bulletSpawn;
 
 
-    public BulletManager bulletManager;
-
     [Header("Movement")]
     public float speed;
     public bool isGrounded;
 
     public MyPhysicObject body;
     //public RigidBody3D body;
-    public CubeBehaviour cube;
+    //public CubeBehaviour cube;
     public Camera playerCam;
     [Header("Bullet")]
     public GameObject bulletPrefab;
@@ -106,8 +104,6 @@ public class PlayerBehaviour : MonoBehaviour
             //body.Velocity = body.Velocity + transform.up * speed;
         }
 
-        //transform.position += body.Velocity;
-        //}
     }
 
 
@@ -146,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void GroundCheck()
     {
-        isGrounded = cube.isGrounded;
+        //isGrounded = cube.isGrounded;
     }
 
 }

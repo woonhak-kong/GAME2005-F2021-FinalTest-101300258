@@ -41,6 +41,11 @@ public class MyPhysicObject : MonoBehaviour
     public Vector3 back { get; } = new Vector3(0, 0, -1);
 
     public bool OnGround { get; set; }
+
+
+    public float lifeTime { get; set; }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +66,11 @@ public class MyPhysicObject : MonoBehaviour
         }
 
         NewPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        lifeTime += Time.deltaTime;
     }
 
     public void UpdateObject()

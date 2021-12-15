@@ -213,8 +213,6 @@ GameObject:
   - component: {fileID: 395476140}
   - component: {fileID: 395476145}
   - component: {fileID: 395476144}
-  - component: {fileID: 395476143}
-  - component: {fileID: 395476142}
   - component: {fileID: 395476141}
   m_Layer: 0
   m_Name: BlockB (10)
@@ -258,47 +256,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &395476142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395476139}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &395476143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395476139}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &395476144
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -349,51 +306,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395476139}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &403008321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 403008323}
-  - component: {fileID: 403008322}
-  m_Layer: 0
-  m_Name: BulletManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &403008322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403008321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97945c94ef046184abc792ceb6046327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxBullets: 50
-  bullet: {fileID: 2898771445226466676, guid: dc05ecf40a596104686052b7abdee0d3, type: 3}
---- !u!4 &403008323
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403008321}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485822233
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,8 +348,6 @@ GameObject:
   - component: {fileID: 526557356}
   - component: {fileID: 526557355}
   - component: {fileID: 526557354}
-  - component: {fileID: 526557358}
-  - component: {fileID: 526557353}
   - component: {fileID: 526557357}
   m_Layer: 0
   m_Name: Ground
@@ -446,28 +356,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &526557353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526557352}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
 --- !u!23 &526557354
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -553,55 +441,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &526557358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526557352}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 0
-  mass: 0
-  bodyType: 0
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
---- !u!1 &559188888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 559188889}
-  m_Layer: 0
-  m_Name: GameController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &559188889
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559188888}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.036062, y: -0.42856568, z: -3.1356082}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &579480852
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,8 +452,6 @@ GameObject:
   - component: {fileID: 579711284}
   - component: {fileID: 579480858}
   - component: {fileID: 579480857}
-  - component: {fileID: 579480856}
-  - component: {fileID: 579480855}
   - component: {fileID: 579578806}
   - component: {fileID: 579480853}
   m_Layer: 9
@@ -664,47 +501,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &579480855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579480852}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 1
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &579480856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579480852}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &579480857
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -787,11 +583,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawn: {fileID: 681930396}
-  bulletManager: {fileID: 403008322}
+  bulletManager: {fileID: 0}
   speed: 6
   isGrounded: 0
   body: {fileID: 579480853}
-  cube: {fileID: 579480855}
+  cube: {fileID: 0}
   playerCam: {fileID: 580202292}
   bulletPrefab: {fileID: 2898771445226466676, guid: dc05ecf40a596104686052b7abdee0d3, type: 3}
   fireRate: 0.2
@@ -804,7 +600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579480852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.18, y: 2.312, z: -12.13}
+  m_LocalPosition: {x: 10.18, y: 0.67, z: -12.13}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 485822234}
@@ -888,8 +684,6 @@ GameObject:
   - component: {fileID: 627956738}
   - component: {fileID: 627956743}
   - component: {fileID: 627956742}
-  - component: {fileID: 627956741}
-  - component: {fileID: 627956740}
   - component: {fileID: 627956739}
   m_Layer: 0
   m_Name: BlockB (21)
@@ -933,47 +727,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &627956740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627956737}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &627956741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627956737}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &627956742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1035,8 +788,6 @@ GameObject:
   - component: {fileID: 676893941}
   - component: {fileID: 676893946}
   - component: {fileID: 676893945}
-  - component: {fileID: 676893944}
-  - component: {fileID: 676893943}
   - component: {fileID: 676893942}
   m_Layer: 0
   m_Name: BlockB (18)
@@ -1080,47 +831,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &676893943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676893940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &676893944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676893940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &676893945
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1305,8 +1015,6 @@ GameObject:
   - component: {fileID: 744227628}
   - component: {fileID: 744227633}
   - component: {fileID: 744227632}
-  - component: {fileID: 744227631}
-  - component: {fileID: 744227630}
   - component: {fileID: 744227629}
   m_Layer: 0
   m_Name: BlockB (19)
@@ -1350,47 +1058,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &744227630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744227627}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &744227631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744227627}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &744227632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1452,8 +1119,6 @@ GameObject:
   - component: {fileID: 848294113}
   - component: {fileID: 848294118}
   - component: {fileID: 848294117}
-  - component: {fileID: 848294116}
-  - component: {fileID: 848294115}
   - component: {fileID: 848294114}
   m_Layer: 0
   m_Name: BlockB (20)
@@ -1497,47 +1162,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &848294115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 848294112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &848294116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 848294112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &848294117
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1599,8 +1223,6 @@ GameObject:
   - component: {fileID: 860657050}
   - component: {fileID: 860657055}
   - component: {fileID: 860657054}
-  - component: {fileID: 860657053}
-  - component: {fileID: 860657052}
   - component: {fileID: 860657051}
   m_Layer: 0
   m_Name: BlockB (16)
@@ -1644,47 +1266,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &860657052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860657049}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &860657053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860657049}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &860657054
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1746,8 +1327,6 @@ GameObject:
   - component: {fileID: 925838134}
   - component: {fileID: 925838139}
   - component: {fileID: 925838138}
-  - component: {fileID: 925838137}
-  - component: {fileID: 925838136}
   - component: {fileID: 925838135}
   m_Layer: 0
   m_Name: BlockB (15)
@@ -1791,47 +1370,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &925838136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925838133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &925838137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925838133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &925838138
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1893,8 +1431,6 @@ GameObject:
   - component: {fileID: 1027308494}
   - component: {fileID: 1027308499}
   - component: {fileID: 1027308498}
-  - component: {fileID: 1027308497}
-  - component: {fileID: 1027308496}
   - component: {fileID: 1027308495}
   m_Layer: 0
   m_Name: BlockB (13)
@@ -1938,47 +1474,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1027308496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027308493}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1027308497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027308493}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1027308498
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2040,8 +1535,6 @@ GameObject:
   - component: {fileID: 1055733194}
   - component: {fileID: 1055733198}
   - component: {fileID: 1055733197}
-  - component: {fileID: 1055733196}
-  - component: {fileID: 1055733195}
   - component: {fileID: 1055733199}
   m_Layer: 0
   m_Name: BlockB (5)
@@ -2064,47 +1557,6 @@ Transform:
   m_Father: {fileID: 1990243753}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1055733195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055733193}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1055733196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055733193}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 3}
-  acceleration: {x: 0, y: 0, z: 3}
 --- !u!23 &1055733197
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2349,8 +1801,6 @@ GameObject:
   - component: {fileID: 1162851629}
   - component: {fileID: 1162851634}
   - component: {fileID: 1162851633}
-  - component: {fileID: 1162851632}
-  - component: {fileID: 1162851631}
   - component: {fileID: 1162851630}
   m_Layer: 0
   m_Name: BlockB (14)
@@ -2394,47 +1844,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1162851631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162851628}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1162851632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162851628}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1162851633
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2496,8 +1905,6 @@ GameObject:
   - component: {fileID: 1176192299}
   - component: {fileID: 1176192304}
   - component: {fileID: 1176192303}
-  - component: {fileID: 1176192302}
-  - component: {fileID: 1176192301}
   - component: {fileID: 1176192300}
   m_Layer: 0
   m_Name: BlockB (6)
@@ -2541,47 +1948,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1176192301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176192298}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1176192302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176192298}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1176192303
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2718,8 +2084,6 @@ GameObject:
   - component: {fileID: 1239517003}
   - component: {fileID: 1239517008}
   - component: {fileID: 1239517007}
-  - component: {fileID: 1239517006}
-  - component: {fileID: 1239517005}
   - component: {fileID: 1239517004}
   m_Layer: 0
   m_Name: BlockB (8)
@@ -2763,47 +2127,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1239517005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239517002}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1239517006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239517002}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1239517007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2865,8 +2188,6 @@ GameObject:
   - component: {fileID: 1313529185}
   - component: {fileID: 1313529190}
   - component: {fileID: 1313529189}
-  - component: {fileID: 1313529188}
-  - component: {fileID: 1313529187}
   - component: {fileID: 1313529186}
   m_Layer: 0
   m_Name: BlockB (22)
@@ -2910,47 +2231,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1313529187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313529184}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1313529188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313529184}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1313529189
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3012,8 +2292,6 @@ GameObject:
   - component: {fileID: 1364101125}
   - component: {fileID: 1364101130}
   - component: {fileID: 1364101129}
-  - component: {fileID: 1364101128}
-  - component: {fileID: 1364101127}
   - component: {fileID: 1364101126}
   m_Layer: 0
   m_Name: BlockB (17)
@@ -3057,47 +2335,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1364101127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364101124}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1364101128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364101124}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1364101129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3238,8 +2475,6 @@ GameObject:
   - component: {fileID: 1461374447}
   - component: {fileID: 1461374452}
   - component: {fileID: 1461374451}
-  - component: {fileID: 1461374450}
-  - component: {fileID: 1461374449}
   - component: {fileID: 1461374448}
   m_Layer: 0
   m_Name: BlockB (12)
@@ -3283,47 +2518,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1461374449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461374446}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1461374450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461374446}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1461374451
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3385,8 +2579,6 @@ GameObject:
   - component: {fileID: 1478970962}
   - component: {fileID: 1478970967}
   - component: {fileID: 1478970966}
-  - component: {fileID: 1478970965}
-  - component: {fileID: 1478970964}
   - component: {fileID: 1478970963}
   m_Layer: 0
   m_Name: BlockB (7)
@@ -3430,47 +2622,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1478970964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478970961}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1478970965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478970961}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1478970966
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3617,7 +2768,7 @@ RectTransform:
   - {fileID: 2136611442}
   - {fileID: 1118531472}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3782,8 +2933,6 @@ GameObject:
   - component: {fileID: 1584754079}
   - component: {fileID: 1584754084}
   - component: {fileID: 1584754083}
-  - component: {fileID: 1584754082}
-  - component: {fileID: 1584754081}
   - component: {fileID: 1584754080}
   m_Layer: 0
   m_Name: BlockB (11)
@@ -3827,47 +2976,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1584754081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584754078}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1584754082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584754078}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1584754083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3929,8 +3037,6 @@ GameObject:
   - component: {fileID: 1860604298}
   - component: {fileID: 1860604303}
   - component: {fileID: 1860604302}
-  - component: {fileID: 1860604301}
-  - component: {fileID: 1860604300}
   - component: {fileID: 1860604299}
   m_Layer: 0
   m_Name: BlockB (9)
@@ -3974,47 +3080,6 @@ MonoBehaviour:
   IsBullet: 0
   Ground: 0
   NewPosition: {x: 0, y: 0, z: 0}
---- !u!114 &1860604300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860604297}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &1860604301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860604297}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &1860604302
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4140,7 +3205,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957707762}
-  - component: {fileID: 1957707761}
   - component: {fileID: 1957707763}
   m_Layer: 0
   m_Name: CollisionManager
@@ -4149,20 +3213,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1957707761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957707760}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c110667484f669949bf3c5ff6dae4b75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubes: []
-  spheres: []
 --- !u!4 &1957707762
 Transform:
   m_ObjectHideFlags: 0
@@ -4251,8 +3301,6 @@ GameObject:
   - component: {fileID: 2025423757}
   - component: {fileID: 2025423761}
   - component: {fileID: 2025423760}
-  - component: {fileID: 2025423759}
-  - component: {fileID: 2025423758}
   - component: {fileID: 2025423762}
   m_Layer: 0
   m_Name: BlockB (4)
@@ -4275,47 +3323,6 @@ Transform:
   m_Father: {fileID: 1990243753}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2025423758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025423756}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d0dbd2dcd7624487947ef0ac21a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isColliding: 0
-  debug: 0
-  contacts: []
-  bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  isGrounded: 0
---- !u!114 &2025423759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025423756}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e3ee23bdf47c64f83e775ee4fc0858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
-  mass: 1
-  bodyType: 1
-  timer: 0
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
 --- !u!23 &2025423760
 MeshRenderer:
   m_ObjectHideFlags: 0

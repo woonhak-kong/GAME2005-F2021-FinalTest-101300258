@@ -43,6 +43,23 @@ public class MyPhysicsSystem : MonoBehaviour
                 obj.UpdateObject();
             }
             DetectCollision();
+
+
+            List<int> tmp = new List<int>();
+            for (int i = 0; i < gameObjectList.Count; i++)
+            {
+                if (gameObjectList[i].lifeTime > 5.0f && gameObjectList[i].IsBullet)
+                {
+                    tmp.Add(i);
+                }
+            }
+            foreach (int i in tmp)
+            {
+                Destroy(gameObjectList[i].gameObject);
+                gameObjectList.RemoveAt(i);
+            }
+            tmp.Clear();
+
         }
     }
 
