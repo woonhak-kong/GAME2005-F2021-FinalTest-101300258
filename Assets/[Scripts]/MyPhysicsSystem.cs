@@ -74,7 +74,10 @@ public class MyPhysicsSystem : MonoBehaviour
     {
         MyPhysicObject first = obj1;
         MyPhysicObject second = obj2;
-
+        if (obj1.type == PhysicsBodyType.STATIC && obj2.type == PhysicsBodyType.STATIC)
+        {
+            return false;
+        }
 
         // PLANE Shape is always should be in first
         // PLANE -- SPHERE
