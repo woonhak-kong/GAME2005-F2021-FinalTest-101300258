@@ -16,8 +16,8 @@ public class PlayerBehaviour : MonoBehaviour
     public float speed;
     public bool isGrounded;
 
-
-    public RigidBody3D body;
+    public MyPhysicObject body;
+    //public RigidBody3D body;
     public CubeBehaviour cube;
     public Camera playerCam;
 
@@ -38,43 +38,74 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void _Move()
     {
-        if (isGrounded)
+        Vector3 orientation;
+        //if (isGrounded)
+        //{
+        if (Input.GetAxisRaw("Horizontal") > 0.0f && Input.GetAxisRaw("Vertical") > 0.0f)
         {
-            if (Input.GetAxisRaw("Horizontal") > 0.0f)
-            {
-                // move right
-                body.velocity = playerCam.transform.right * speed * Time.deltaTime;
-            }
-
-            if (Input.GetAxisRaw("Horizontal") < 0.0f)
-            {
-                // move left
-                body.velocity = -playerCam.transform.right * speed * Time.deltaTime;
-            }
-
-            if (Input.GetAxisRaw("Vertical") > 0.0f)
-            {
-                // move forward
-                body.velocity = playerCam.transform.forward * speed * Time.deltaTime;
-            }
-
-            if (Input.GetAxisRaw("Vertical") < 0.0f)
-            {
-                // move Back
-                body.velocity = -playerCam.transform.forward * speed * Time.deltaTime;
-            }
-
-            body.velocity = Vector3.Lerp(body.velocity, Vector3.zero, 0.9f);
-            body.velocity = new Vector3(body.velocity.x, 0.0f, body.velocity.z); // remove y
-
-
-            if (Input.GetAxisRaw("Jump") > 0.0f)
-            {
-                body.velocity = transform.up * speed * 0.1f * Time.deltaTime;
-            }
-
-            transform.position += body.velocity;
+            // forward right
+            orientation = (transform.right + transform.forward) * 0.5f;
         }
+        else if (Input.GetAxisRaw("Horizontal") < 0.0f && Input.GetAxisRaw("Vertical") > 0.0f)
+        {
+            // forward left
+            orientation = (-transform.right + transform.forward) * 0.5f;
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0.0f && Input.GetAxisRaw("Vertical") < 0.0f)
+        {
+            // back right
+            orientation = (transform.right + -transform.forward) * 0.5f;
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0.0f && Input.GetAxisRaw("Vertical") < 0.0f)
+        {
+            // back left
+            orientation = (-transform.right + -transform.forward) * 0.5f;
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0.0f)
+        {
+            // move right
+            orientation = transform.right;
+            //body.Velocity.x = transform.right * speed;
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0.0f)
+        {
+            // move left
+            orientation = -transform.right;
+            //body.Velocity.x = -transform.right * speed;
+        }
+        else if (Input.GetAxisRaw("Vertical") > 0.0f)
+        {
+            // move forward
+            orientation = transform.forward;
+            //body.Velocity.z = transform.forward * speed;
+        }
+        else if (Input.GetAxisRaw("Vertical") < 0.0f)
+        {
+            // move Back
+            orientation = -transform.right;
+            //body.Velocity.z = -transform.forward * speed;
+        }
+        else
+        {
+            orientation = Vector3.zero;
+        }
+
+        body.Velocity.x = orientation.x * speed;
+        body.Velocity.z = orientation.z * speed;
+
+        //body.Velocity = Vector3.Lerp(body.Velocity, Vector3.zero, 0.9f);
+        //body.Velocity = new Vector3(body.Velocity.x, 0.0f, body.Velocity.z); // remove y
+
+
+        if (Input.GetKeyDown(KeyCode.Space) == true)
+        {
+            Debug.Log("space");
+            body.Velocity.y = transform.up.y * speed * 1.5f;
+            //body.Velocity = body.Velocity + transform.up * speed;
+        }
+
+        //transform.position += body.Velocity;
+        //}
     }
 
 
