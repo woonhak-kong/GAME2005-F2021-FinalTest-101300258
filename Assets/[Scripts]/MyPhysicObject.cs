@@ -9,6 +9,11 @@ public enum CollisionShapeE
     PLANE,
     AABB
 }
+public enum PhysicsBodyType
+{
+    STATIC,
+    DYNAMIC
+}
 
 public class MyPhysicObject : MonoBehaviour
 {
@@ -17,6 +22,7 @@ public class MyPhysicObject : MonoBehaviour
     public CollisionShapeE shape;
     public float Bounciness = 1.0f;
     public float Friction = 1.0f;
+    public PhysicsBodyType type = PhysicsBodyType.DYNAMIC;
     public bool Lock = false;
     public bool Ground = false;
 
@@ -48,6 +54,12 @@ public class MyPhysicObject : MonoBehaviour
             radius = transform.localScale.x / 2;
         }
 
+        if(type ==  PhysicsBodyType.DYNAMIC)
+        {
+            Mass = float.MaxValue;
+
+        }
+
         NewPosition = transform.position;
     }
 
@@ -57,7 +69,7 @@ public class MyPhysicObject : MonoBehaviour
         {
             if (!Pause)
             {
-                if (!Lock)
+                if (type == PhysicsBodyType.DYNAMIC)
                 {
                     transform.position = NewPosition;
 
