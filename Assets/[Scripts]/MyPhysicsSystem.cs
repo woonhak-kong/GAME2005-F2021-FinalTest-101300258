@@ -342,7 +342,7 @@ public class MyPhysicsSystem : MonoBehaviour
         float umg = frictionU * second.Mass * GRAVITY;
         float aceel = umg / second.Mass;
 
-        if (!first.Lock)
+        if (first.type == PhysicsBodyType.DYNAMIC)
         {
             // for Reposition
             first.NewPosition.x = first.transform.position.x + first.Velocity.x * tangentVectorNormal.x * Time.deltaTime;
@@ -359,7 +359,7 @@ public class MyPhysicsSystem : MonoBehaviour
             first.Velocity = first.Velocity - tangentVector.normalized * aceel * Time.deltaTime;
 
         }
-        if(!second.Lock)
+        if(second.type == PhysicsBodyType.DYNAMIC)
         {
             // for Reposition
             second.NewPosition.x = second.transform.position.x + second.Velocity.x * tangentVectorNormal.x * Time.deltaTime;

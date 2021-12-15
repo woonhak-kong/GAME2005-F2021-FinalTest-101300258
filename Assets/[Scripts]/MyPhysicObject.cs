@@ -23,7 +23,7 @@ public class MyPhysicObject : MonoBehaviour
     public float Bounciness = 1.0f;
     public float Friction = 1.0f;
     public PhysicsBodyType type = PhysicsBodyType.DYNAMIC;
-    public bool Lock = false;
+    public bool IsBullet = false;
     public bool Ground = false;
 
 
@@ -74,8 +74,10 @@ public class MyPhysicObject : MonoBehaviour
                     transform.position = NewPosition;
 
 
-
-                    Velocity.y = Velocity.y + Vector3.down.y * MyPhysicsSystem.GRAVITY * Time.deltaTime;
+                    if (!IsBullet)
+                    {
+                        Velocity.y = Velocity.y + Vector3.down.y * MyPhysicsSystem.GRAVITY * Time.deltaTime;
+                    }
                     //Debug.Log("=== " + Velocity.y);
                     //Velocity.x = Velocity.x * Time.deltaTime * 0.001f;
                     //Velocity.z = Velocity.z * Time.deltaTime * 0.001f;
