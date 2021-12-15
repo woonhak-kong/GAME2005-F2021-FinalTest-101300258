@@ -40,21 +40,24 @@ public class RigidBody3D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bodyType == BodyType.DYNAMIC)
+        if (MainSceneUI.IsStart)
         {
-            if (isFalling)
+            if (bodyType == BodyType.DYNAMIC)
             {
-                timer += Time.deltaTime;
-                
-                if (gravityScale < 0)
+                if (isFalling)
                 {
-                    gravityScale = 0;
-                }
+                    timer += Time.deltaTime;
 
-                if (gravityScale > 0)
-                {
-                    velocity += acceleration * 0.5f * timer * timer;
-                    transform.position += velocity;
+                    if (gravityScale < 0)
+                    {
+                        gravityScale = 0;
+                    }
+
+                    if (gravityScale > 0)
+                    {
+                        velocity += acceleration * 0.5f * timer * timer;
+                        transform.position += velocity;
+                    }
                 }
             }
         }

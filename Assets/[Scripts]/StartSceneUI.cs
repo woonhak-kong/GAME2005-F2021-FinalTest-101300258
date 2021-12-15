@@ -10,10 +10,12 @@ public class StartSceneUI : MonoBehaviour
     public Button StartButton;
     public Button QuitButton;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.None;
     }
 
 
