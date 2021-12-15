@@ -6,8 +6,6 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     public Transform bulletSpawn;
-    public GameObject bullet;
-    public int fireRate;
 
 
     public BulletManager bulletManager;
@@ -20,7 +18,11 @@ public class PlayerBehaviour : MonoBehaviour
     //public RigidBody3D body;
     public CubeBehaviour cube;
     public Camera playerCam;
-
+    [Header("Bullet")]
+    public GameObject bulletPrefab;
+    public float fireRate = 1;
+    public float LauchSpeed = 4;
+    private float LimitFiring = 0;
     void start()
     {
 
@@ -111,16 +113,30 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void _Fire()
     {
-        if (Input.GetAxisRaw("Fire1") > 0.0f)
+        if (Input.GetAxisRaw("Fire1") > 0 && LimitFiring > fireRate)
         {
-            // delays firing
-            if (Time.frameCount % fireRate == 0)
-            {
+            //var randomSphereIndex = Random.Range(0, spherePrefabs.Count);
+            var bullet = Instantiate(bulletPrefab, bulletSpawn.position + bulletSpawn.forward * 0.4f, Quaternion.identity);
+            bullet.GetComponent<MyPhysicObject>().Velocity = bulletSpawn.forward * LauchSpeed;
+            bullet.GetComponent<MyPhysicObject>().NewPosition = bullet.GetComponent<MyPhysicObject>().transform.position;
 
-                var tempBullet = bulletManager.GetBullet(bulletSpawn.position, bulletSpawn.forward);
-                tempBullet.transform.SetParent(bulletManager.gameObject.transform);
-            }
+            MyPhysicsSystem system = FindObjectOfType<MyPhysicsSystem>();
+            system.gameObjectList.Add(bullet.GetComponent<MyPhysicObject>());
+
+            LimitFiring = 0.0f;
         }
+
+        //if (Input.GetAxisRaw("Fire1") > 0.0f)
+        //{
+        //    // delays firing
+        //    if (Time.frameCount % fireRate == 0)
+        //    {
+
+        //        var tempBullet = bulletManager.GetBullet(bulletSpawn.position, bulletSpawn.forward);
+        //        tempBullet.transform.SetParent(bulletManager.gameObject.transform);
+        //    }
+        //}
+        LimitFiring += Time.deltaTime;
     }
 
     void FixedUpdate()
