@@ -82,7 +82,7 @@ public class PlayerBehaviour : MonoBehaviour
         else if (Input.GetAxisRaw("Vertical") < 0.0f)
         {
             // move Back
-            orientation = -transform.right;
+            orientation = -transform.forward;
             //body.Velocity.z = -transform.forward * speed;
         }
         else
@@ -100,7 +100,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             Debug.Log("space");
-            body.Velocity.y = transform.up.y * speed * 1.5f;
+            body.Velocity.y = transform.up.y * 6;
             //body.Velocity = body.Velocity + transform.up * speed;
         }
 

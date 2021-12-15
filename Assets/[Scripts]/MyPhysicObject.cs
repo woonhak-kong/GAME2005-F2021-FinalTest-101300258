@@ -54,7 +54,7 @@ public class MyPhysicObject : MonoBehaviour
             radius = transform.localScale.x / 2;
         }
 
-        if(type ==  PhysicsBodyType.DYNAMIC)
+        if(type ==  PhysicsBodyType.STATIC)
         {
             Mass = float.MaxValue;
 
