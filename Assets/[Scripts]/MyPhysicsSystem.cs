@@ -44,7 +44,7 @@ public class MyPhysicsSystem : MonoBehaviour
             }
             DetectCollision();
 
-
+            // for deleting projectiles
             List<int> tmp = new List<int>();
             for (int i = 0; i < gameObjectList.Count; i++)
             {

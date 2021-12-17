@@ -583,15 +583,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawn: {fileID: 681930396}
-  bulletManager: {fileID: 0}
   speed: 6
   isGrounded: 0
   body: {fileID: 579480853}
-  cube: {fileID: 0}
   playerCam: {fileID: 580202292}
   bulletPrefab: {fileID: 2898771445226466676, guid: dc05ecf40a596104686052b7abdee0d3, type: 3}
   fireRate: 0.2
-  LauchSpeed: 10
+  LauchSpeed: 15
 --- !u!4 &579711284
 Transform:
   m_ObjectHideFlags: 0
